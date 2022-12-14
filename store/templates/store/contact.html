@@ -1,0 +1,82 @@
+{% extends 'store/main.html' %}
+{% block content %}
+<!----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>MyDjangoApp</title>
+   
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+<div class="container">
+    <form action="{% url 'login' %}" method="post">
+        {% csrf_token %}
+        <div class="col-md-8 col-md-offset-2">
+            <div class="panel panel-default">
+                <div class="panel-heading">Login</div>
+                <div class="panel-body">
+                    {% if error_message %}
+                        <p class="bg-danger p-d ml-b">{{ error_message }}</p>
+                    {% endif %}
+                    <div class="form-group clearfix">
+                        <label for="username" class="col-md-4 control-label text-right">Username:</label>
+                        <div class="col-md-6">
+                            <input name="username" value="" type="text" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group clearfix">
+                        <label for="password" class="col-md-4 control-label text-right">Password:</label>
+                        <div class="col-md-6">
+                            <input name="password" type="password" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-md-offset-4">
+                        <input name="login" type="submit" value="Login" class="btn btn-success" /> &nbsp;
+                        <a href="{% url 'home' %}">or Register</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+-->
+<!--Section: Content-->
+<section class="mb-5">
+    <h4 class="mb-5 text-center"><strong>CONTACT</strong></h4>
+    <form>
+    <div class="row d-flex justify-content-center">
+      <div class="col-md-6">
+        <form>
+            <!-- 2 column grid layout with text inputs for the first and last names -->
+            <div class="row mb-4">
+                <div class="col">
+                <div class="form-outline mb-4">
+                <label class="form-label" for="form4Example1">Email</label>
+                <input type="text" id="form4Example1" class="form-control" />
+                </div>
+            </div>
+
+            <!-- Email input -->
+            <div class="form-outline mb-4">
+                <label class="form-label" for="form4Example2">Name</label>
+                <input type="email" id="form4Example2" class="form-control" />
+            </div>
+
+            <!-- Submit button -->
+            <button type="submit" class="btn btn-primary btn-block mb-4">Send</button>
+            </form>
+
+
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <!-- Custom scripts -->
+    <script type="text/javascript" src="js/script.js"></script>
+{% endblock content %}
